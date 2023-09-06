@@ -8,7 +8,10 @@
 }
 nav{
   text-align:center;
+  
+  margin:auto;
   margin-top:15px;
+  width:100px;
 }
 
 nav a:link{
