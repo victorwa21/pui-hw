@@ -37,7 +37,6 @@ main{
 main h2{
   font-weight:normal;
   text-align:center;
-   
 }
 /*https://www.w3schools.com/cssref/css3_pr_align-items.php*/
 .items{
@@ -174,9 +173,8 @@ select{
 
 }
 .cart-item img{
-    width:200px;
-    border:2px black solid;
-    
+  width:200px;
+  border:2px black solid;  
 }
 .cart-item h4{
   margin-top:10px;
