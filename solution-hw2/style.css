@@ -209,26 +209,25 @@ select{
   margin-left:10px;
 }
 .cart{
-  width:700px;
+  width:800px;
   margin:auto;
   margin-top:50px;
+  margin-left:450px;
     
 }
-.cart h1{
-  text-align:center;
-  font-weight: normal;
-  margin-bottom:0px;
-}
+
 .cart-items{
   margin-top:30px;
   margin-bottom:-40px;
 }
 .cart-item{
-  width:400px;
+  display:flex;
+  flex-direction: row;
+  width:800px;
   margin:auto;
-  text-align:center;
-  margin-top:50px;
-  margin-bottom:80px;
+  
+  margin-top:20px;
+  
     
     
 
@@ -253,23 +252,56 @@ select{
   background-color: black;
 }
 .checkout{
-  text-align: center;
-  width:180px;
-  margin: auto;
-  align-items: center;
-  margin-bottom:100px;
+  
+  width:100%;
+  
+  margin-bottom:180px;
+  
 }
 .checkout button{
   margin-top:15px;
-  width:100%;
-  height:50px;
+  width:180px;
+  height:60px;
   border-radius: 0;
   border:3px solid black;
   background-color: yellow;
   font-weight:bold;
   font-size:22px;
+  float:right;
+  margin-right:15px;
 }
-
+.item-desc{
+  margin-top:40px;
+  margin-left:30px;
+  width:380px;
+  line-height:2em;
+}
+.item-price{
+  margin-top:50px;
+  float:right;
+  width:170px;
+  margin-right:0;
+  
+}
+.item-price h1{
+  font-weight:normal;
+  text-align:right;
+}
+hr{
+  width:840px;
+}
+.total{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left:230px;
+  margin-top:20px;
+  margin-bottom:20px;
+  width:555px;
+}
+.total h1{
+  font-weight:normal;
+}
 
 
 
