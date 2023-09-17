@@ -15,7 +15,6 @@ body{
 
 nav{
   display:flex;
-  
   margin-top:50px;
   width:330px;
   height:20px;
@@ -48,7 +47,6 @@ nav a:visited{
 
 .head h1{
   margin-top:80px;
-  
   font-weight:100;
   
 }
@@ -59,15 +57,12 @@ nav a:visited{
   
 }
 main{
-  
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
   width:1200px;
   margin:auto;
   justify-content: center;
-  
-  
 }
 main h2{
   font-weight:normal;
@@ -75,12 +70,9 @@ main h2{
 }
 /*https://www.w3schools.com/cssref/css3_pr_align-items.php*/
 .items{
-  display:flex;
-  
+  display:flex; 
   width:370px;
   justify-content: center;
-  
-  
   margin-top:50px; 
 }
 .items img{
@@ -114,8 +106,7 @@ article{
     
 }
 .items a:hover h3{
-  font-weight:bold;
-    
+  font-weight:bold;  
 }
 
 .item-detail{
@@ -136,13 +127,13 @@ article{
   text-align:center;
 }
 .select-item img{
-    width:600px;
-    border:4px black solid;
+  width:600px;
+  border:4px black solid;
 }
 .select-item h2{
-    margin-top:40px;
-    margin-bottom: 30px;
-    font-weight: normal;
+  margin-top:40px;
+  margin-bottom: 30px;
+  font-weight: normal;
 }
 .desc{
   width:300px;
@@ -155,8 +146,7 @@ article{
   font-weight: normal;
 }
 label{
-  font-size:20px;
-  
+  font-size:20px;    
 }
 .dropdowns{
   width:300px;
@@ -224,12 +214,7 @@ select{
   flex-direction: row;
   width:800px;
   margin:auto;
-  
   margin-top:20px;
-  
-    
-    
-
 }
 .cart-item img{
   width:200px;
@@ -251,11 +236,8 @@ select{
   background-color: black;
 }
 .checkout{
-  
   width:100%;
-  
   margin-bottom:180px;
-  
 }
 .checkout button{
   margin-top:15px;
@@ -280,7 +262,6 @@ select{
   float:right;
   width:170px;
   margin-right:0;
-  
 }
 .item-price h1{
   font-weight:normal;
