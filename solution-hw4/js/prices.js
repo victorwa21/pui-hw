@@ -40,7 +40,7 @@ function glazingChange(element){
   newPrice.innerHTML = "$ "+ finalPrice.toFixed(2)               
 }
 
-console.log(cart);
+
 
 
 
