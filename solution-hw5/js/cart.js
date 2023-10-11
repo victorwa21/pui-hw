@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         orderCounter++;
         let item = clone.querySelector("#item");
         item.setAttribute("data-order", parseInt(orderCounter));
-        console.log(item.getAttribute("data-order"));
+        //console.log(item.getAttribute("data-order"));
         r = clone.querySelector("#roll");
         i = clone.querySelector("#rImage");
         p = clone.querySelector("#psize");
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (cartItem) {
                 cartItem.remove();
                 sCart.splice(cartItem.getAttribute("data-order"), 1);
-                console.log(cartItem.getAttribute("data-order"))
+                //console.log(cartItem.getAttribute("data-order"))
                 console.log(sCart);
                 updateOrder();
                 let p = itemPrice.textContent.split(" ");

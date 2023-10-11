@@ -20,7 +20,6 @@ nav{
   height:20px;
   padding-bottom:50px;
   border-bottom: 5px solid black;
-  
   padding-left:500px;
   
 }
@@ -32,10 +31,6 @@ nav a:link{
   padding-bottom: 20px;
   font-size:22px;
   margin-right:80px;
-
-  
-  
-  
 }
 nav a:visited{
   text-align:center;
