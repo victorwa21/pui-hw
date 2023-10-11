@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Gallery</title>
+  </head>
+  
+  <body>
+    <div class="head">
+      <div class="logo">
+        <a href="index.html"><img src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo"></a>
+      </div>
+      <div class="head-col">
+        <nav>
+          <a href="index.html" >PRODUCTS</a>
+          <a href="shop-cart.html" id="active">CART</a>
+        </nav>
+        <h1>Shopping cart</h1>
+      </div>
+    </div>
+    <div class="cart" id ="cart">
+      <template class="cart-items" id="cart-items">
+        
+
+        <div class="cart-item" id="item">
+          <div class="cart-img" >
+            <img id="rImage">
+            <h4 class = "remove" id="remove">Remove</h4>
+          </div>
+          <div class="item-desc">
+            <h2 id="roll"></h2> 
+            <h2 id="glaze"> </h2> 
+            <h2 id="psize">Pack Size: </h2>
+          </div>
+          <div class="item-price">
+            <h1 id="totalp"></h1>
+          </div>
+        </div>
+      
+        
+      </template>
+      
+      
+    </div>
+    <hr id="checkout-hr">
+    <div class="checkout">
+      <div class="total">
+        <h1>Total </h1>
+        <h1 id="cart-total"></h1>
+      </div>
+      <button>Checkout</button>
+    </div>
+    
+    <script src = "js/cart.js"></script>
+  </body>
+</html>
