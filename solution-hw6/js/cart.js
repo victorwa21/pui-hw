@@ -37,20 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
             {num:1, value: 1}, {num:3, value: 3}, {num:6, value: 5}, {num:12, value: 10},
         ]
 
-    let sCart = [];
-    class Roll {
-        constructor(rollType, rollGlazing, packSize, rollPrice) {
-            this.type = rollType;
-            this.glazing =  rollGlazing;
-            this.size = packSize;
-            this.basePrice = rollPrice;
-        }
-    }
    let cart;
-
     if (typeof localStorage !== 'undefined') {
         cart = JSON.parse(localStorage.getItem("storedcart"));
-       
     }
     else{
         let newcart =[];
@@ -61,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function add(roll){
-        
         let template = document.getElementById("cart-items");
         let clone = template.content.cloneNode(true);
         orderCounter++;
@@ -101,10 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let cartu = JSON.parse(localStorage.getItem("storedcart"));
                 console.log(cartu);
                 cartItem.remove();
-
                 cartu.splice(cartItem.getAttribute("data-order"), 1);
                 updateOrder();
-
                 let p = itemPrice.textContent.split(" ");
                 let price = parseFloat(p[1]);
                 sum = sum - price;
@@ -136,4 +122,4 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalPrice = document.getElementById("cart-total");
     totalPrice.textContent = "$ " + sum.toFixed(2);
 });
-console.log(JSON.parse(localStorage.getItem("storedcart")))
+console.log(JSON.parse(localStorage.getItem("storedcart")));

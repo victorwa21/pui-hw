@@ -1,5 +1,3 @@
-
-
 let basePrice = 0;
 const rolls = {
     "Original": {

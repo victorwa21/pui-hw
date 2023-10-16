@@ -35,7 +35,7 @@ function glazingChange(element){
   }
   else{
     pPrice = element.value; 
-    }
+  }
   finalPrice = (+rolls[rollType]["basePrice"] + +gPrice) * pPrice;
   newPrice.innerHTML = "$ "+ finalPrice.toFixed(2)               
 }
