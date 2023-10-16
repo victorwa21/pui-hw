@@ -43,15 +43,7 @@ if (rolls.hasOwnProperty(rollType)){
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    let cart;
-    if (typeof localStorage !== 'undefined') {
-        cart = JSON.parse(localStorage.getItem("storedcart"));
-    }
-    else{
-        cart =[];
-        localStorage.setItem("storedcart", JSON.stringify(cart));
-    }
-    
+    let storedcart = JSON.parse(localStorage.getItem("storedcart")) || [];
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -63,10 +55,10 @@ class Roll {
 }
 let newRoll;
 document.getElementById("addcart").addEventListener("click", function(){
+
     const selIndg = selectg.selectedIndex;
     const selIndp = selectp.selectedIndex;
     newRoll = new Roll(rollType, selectg.options[selIndg].text, selectp.options[selIndp].text, rolls[rollType]["basePrice"]);
-    let storedcart = JSON.parse(localStorage.getItem("storedcart"));
     storedcart.push(newRoll);
     localStorage.setItem("storedcart", JSON.stringify(storedcart));
     console.log(storedcart);
