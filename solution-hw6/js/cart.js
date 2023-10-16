@@ -37,14 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             {num:1, value: 1}, {num:3, value: 3}, {num:6, value: 5}, {num:12, value: 10},
         ]
 
-   let cart;
-    if (typeof localStorage !== 'undefined') {
-        cart = JSON.parse(localStorage.getItem("storedcart"));
-    }
-    else{
-        let newcart =[];
-        localStorage.setItem("storedcart", JSON.stringify(newcart));
-    }
+        let cart = JSON.parse(localStorage.getItem("storedcart")) || [];
     for(let i = 0; i<cart.length; i++){
         add(cart[i]);
     }
