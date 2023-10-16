@@ -43,10 +43,15 @@ if (rolls.hasOwnProperty(rollType)){
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    if (typeof localStorage == 'undefined') {
-        const cart =[];
+    let cart;
+    if (typeof localStorage !== 'undefined') {
+        cart = JSON.parse(localStorage.getItem("storedcart"));
+    }
+    else{
+        cart =[];
         localStorage.setItem("storedcart", JSON.stringify(cart));
     }
+    
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
