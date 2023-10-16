@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             {num:1, value: 1}, {num:3, value: 3}, {num:6, value: 5}, {num:12, value: 10},
         ]
 
-        let cart = JSON.parse(localStorage.getItem("storedcart")) || [];
+    let cart = JSON.parse(localStorage.getItem("storedcart")) || [];
     for(let i = 0; i<cart.length; i++){
         add(cart[i]);
     }
@@ -79,17 +79,16 @@ document.addEventListener('DOMContentLoaded', function () {
             let cartItem = event.target.closest(".cart-item");
             let itemPrice = cartItem.querySelector("#totalp");
             if (cartItem) {
-                let cartu = JSON.parse(localStorage.getItem("storedcart"));
-                console.log(cartu);
+                console.log(cart);
                 cartItem.remove();
-                cartu.splice(cartItem.getAttribute("data-order"), 1);
+                cart.splice(cartItem.getAttribute("data-order"), 1);
                 updateOrder();
                 let p = itemPrice.textContent.split(" ");
                 let price = parseFloat(p[1]);
                 sum = sum - price;
                 let totalPrice = document.getElementById("cart-total");
                 totalPrice.textContent = "$ " + sum.toFixed(2);
-                localStorage.setItem("storedcart", JSON.stringify(cartu));
+                localStorage.setItem("storedcart", JSON.stringify(cart));
 
             }
         }
