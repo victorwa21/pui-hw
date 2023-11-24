@@ -6,7 +6,9 @@ body{
 }
 .head img{
     margin-top:0;
+    width:100%;
 }
+
 .book{
     width:700px;
     height:500px;
@@ -55,8 +57,7 @@ body{
 .box{
     width:200px;
     height:50px;
-    border: 3px #005478 solid;
-    border-radius: 20px;
+    
     
    
 }
@@ -77,7 +78,9 @@ body{
 .arrDate {
     margin-left: 60px;
     margin-right: 60px; 
-    padding-top:10px;
+    
+    
+    
 }
 
 .switch {
@@ -111,10 +114,90 @@ body{
 #myDropdown a:hover, #arrDestdropdown a:hover {
     background-color: #f1f1f1;
 }
-.datepicker{
+.datepicker, .arrdatepicker{
     display: block;
+    position:relative;
     justify-content: center;
     text-align:center;
     margin: auto;
     border:1px black solid;
+    z-index:2;
+    background-color:white;
+    color:#005478;
+}
+.dropdown-item, .arrdropdown-item{
+    font-size:14px;
+}
+.dropdown-menu{
+    color:#005478;
+}
+
+#dropdownTrigger, #arrdropdownTrigger{
+    background:white;
+    border: #005478 1px solid;
+    color:#005478;
+    margin:auto;
+    justify-content: center;
+    align-items:center;
+}
+.dropdown-item.active, .arrdropdown-item.active {
+    background-color: #ffcc00; /* Your desired background color */
+    color: #333; /* Your desired text color */
+}
+.search{
+    width:160px;
+    height:50px;
+    color:white;
+    font-size:18px;
+    background-color: #005478;
+    border-radius:10px;
+
+}
+#datepickerBtn, #arrdatepickerBtn{
+    width:250px;
+}
+.depTrips{
+    
+    
+   
+    
+    margin:auto;
+    margin-top:50px;
+    
+}
+.select{
+    width:100px;
+    height:50px;
+    color:white;
+    font-size:14px;
+    background-color: #005478;
+    border-radius:10px;
+}
+.time1, .time2{
+    font-size:24px;
+    font-weight:bold;
+}
+.address1, .address2{
+    margin-top:20px;
+}
+.depTrip{
+    padding:10px;
+    padding-top:30px;
+    padding-bottom:30px;
+    
+}
+.arrow img{
+    width:90px;
+}
+.depTrip{
+    
+    border: 3px solid #005478;
+    border-radius:10px;
+    width:850px;
+    margin:auto;
+}
+.depPrice{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:50px;
 }
