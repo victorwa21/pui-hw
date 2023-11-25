@@ -1,10 +1,11 @@
+var dropdownItemId;
 $(document).ready(function(){
     
     var arrDestText = document.getElementById("arrdropdownTrigger");
 
    
-
-    var dropdownItems = document.querySelectorAll(".dropdown-item");
+    
+    
     var depDestText = document.getElementById("dropdownTrigger");
 
     // Event listener for Bootstrap dropdown show event
@@ -20,15 +21,18 @@ $(document).ready(function(){
     // Event listener for Bootstrap dropdown item click
     $(".dropdown-item").on("click", function() {
         // Update the text based on the clicked item
-        if (this.id === "pitt") {
+        dropdownItemId = $(this).attr("id");
+        console.log(dropdownItemId); 
+        if (dropdownItemId === "pitt") {
             depDestText.innerHTML = "Pittsburgh, PA - Union Station (PGH)";
-        } else if (this.id === "ny") {
+        } else if ( dropdownItemId === "ny") {
             depDestText.innerHTML = "New York, NY - Moynihan Train Hall (NYP)";
-        } else if (this.id === "bos") {
+        } else if ( dropdownItemId=== "bos") {
             depDestText.innerHTML = "Boston, MA - Back Bay Station (BBY)";
         } else {
             depDestText.innerHTML = "From:  enter an address or city";
         }
+        
     });
 
     $("#arrdropdownTrigger").on("show.bs.dropdown", function () {
@@ -119,5 +123,14 @@ $('#arrdatepickerTrigger').on('changeDate', function (selected) {
     $('.datepicker').hide();
 });
 
+$(".search").on("click", function() {
+    // Trigger an event to signal that the search button was clicked and pass the dropdownItemId
+    event.preventDefault();
+    localStorage.setItem("selectedDropdownItemId", dropdownItemId);
+    window.location.href = "bookdep.html";
     
+});
+
+
+   
 });

@@ -180,24 +180,27 @@ body{
 .address1, .address2{
     margin-top:20px;
 }
-.depTrip{
+#eachTrip{
     padding:10px;
     padding-top:30px;
-    padding-bottom:30px;
+    padding-bottom:40px;
     
-}
-.arrow img{
-    width:90px;
-}
-.depTrip{
-    
-    border: 3px solid #005478;
-    border-radius:10px;
     width:850px;
     margin:auto;
+    border: 3px solid #005478;
+    border-radius:10px;
+    margin-bottom:30px;
+    
+}
+
+.arrow img{
+    width:90px;
 }
 .depPrice{
     font-size:28px;
     font-weight:bold;
     margin-bottom:50px;
+}
+.fares{
+    height:800px;
 }
