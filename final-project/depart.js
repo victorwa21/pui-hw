@@ -6,7 +6,7 @@ $(document).ready(function(){
                 { id: 1, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
                   arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$46.00"},
                   { id: 2, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
-                  arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$46.00"},
+                  arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$50.00"},
                 //{ id: 3, name: "Object3", value: "Value3" }
             ],
             ny: [
@@ -63,6 +63,7 @@ $(document).ready(function(){
         depTrips.forEach(function (depTrip) {
             depTrip.appendChild(clone);
         }); 
+       
 
                            
                         
@@ -72,33 +73,151 @@ $(document).ready(function(){
                        
                       
     }
-
+    
     document.querySelector(".depTrips").addEventListener("click", function (event) {
+        let totalPint;
+        let totalP;
         // Check if the clicked element is a button with class "select"
         if (event.target.classList.contains("select")) {
+            
+
             // Get the parent container of the button
             let templateContainer = event.target.closest("#eachTrip");
-
+            
+           
                 
                 templateContainer.classList.toggle("fares");
+               
+       
+                $('.select').hide();
+                let p = templateContainer.querySelector(".depPrice");
+                const depPriceText = p.textContent;
+
+                // Use a regular expression to extract the numeric part
+                const priceArray = depPriceText.match(/\d+\.\d+/);
+
+                // If a match is found, get the first element from the array (the whole match)
+                const price = priceArray ? priceArray[0] : null;
+
+                // Convert the extracted string to a number
+                const numericPrice = parseFloat(price);
+                localStorage.setItem('selTripPrice', numericPrice);
+                localStorage.setItem('selectedFare', 0);
+                let initialPrice = parseFloat(localStorage.getItem('selTripPrice'));
+                totalP = initialPrice.toFixed(2);
+
+
+
+           
+
+                if (templateContainer.classList.contains("fares")) {
+                    
+
+                    const fareOptions = [
+                        { value: 'Coach', label: 'Coach +$0.00', price: 0},
+                        { value: 'Business', label: 'Business +$75.00', price: 75 },
+                        { value: 'PrivateRoom', label: 'Private Room +$250.00', price: 250 }
+                    ];
             
-        }
-    });
+                    // Get the fare-options container
+                    const uniqueName = 'fareClass_' + Date.now();
+
+                    // Clear existing content within the current templateContainer
+                    $(templateContainer).find('.fareOptions').empty();
+                
+                    // Loop through the fare options and create radio buttons
+                    fareOptions.forEach(function (option) {
+                        // Create unique IDs for radio buttons within each template
+                        const radioButtonId = uniqueName + '_' + option.value.toLowerCase();
+                
+                        // Create radio button element
+                        const radioButton = $('<input>', {
+                            type: 'radio',
+                            name: uniqueName,
+                            value: option.value,
+                            id: radioButtonId,
+                            price: option.price
+                        });
+                        if (radioButton.val() === 'Coach') {
+                            radioButton.prop('checked', true);
+                        }
+                        // Create label element
+                        const label = $('<label>', {
+                            for: radioButtonId,
+                            html: option.label
+                        });
+                
+                        // Append radio button and label to the container within the current templateContainer
+                        $(templateContainer).find('.fareOptions').append(radioButton);
+                        $(templateContainer).find('.fareOptions').append(label);
+                        $(templateContainer).find('.fareOptions').append('<br>'); // Add line break for better spacing
+                        
+                        radioButton.on('click', function () {
+                            
+
+                               
+                            
+                           
+                            const selectedPrice = parseFloat(this.getAttribute('price'));
+                            const selTripPrice = parseFloat(localStorage.getItem('selTripPrice'));
+                            localStorage.setItem('selectedFare', this.value);
+
+                            // Assuming .depPrice is a class applied to an element that displays the price
+                            totalPint=(selectedPrice + selTripPrice)
+                            totalP = totalPint.toFixed(2);
+                           p.textContent= ("$" + totalP);
+                            
+                        });
+                    });
+                    $('.confirm').on('click', function()  {
+                        localStorage.setItem('finalDepPrice', totalP);
+                        console.log(totalP);
+                    }
+
+                    )}
+
+                }});
+
+   
+
     document.addEventListener("click", function (event) {
         // Check if the clicked element is not part of the templateContainer
         let hasFaresClass = event.target.closest(".fares");
+        
+
 
         // If the clicked element or its ancestors do not have the "fares" class
         if (!hasFaresClass) {
+
             // Remove the class from all elements with the "fares" class
-            let templateContainers = document.querySelectorAll(".fares");
-            templateContainers.forEach(function (templateContainer) {
+            let templateContainer = document.querySelector(".fares");
+                let p = templateContainer.querySelector(".depPrice");
+                const selTripPrice = parseFloat(localStorage.getItem('selTripPrice'));
+                p.textContent= ("$" + selTripPrice.toFixed(2));
                 templateContainer.classList.remove("fares");
-            });
+                $('.select').show();
+           
         }
     });
 
+    
 
+    var depDate = localStorage.getItem('departureDate');
+    departureDate = document.querySelector(".departureDate");
+    departureDate.textContent = depDate;
+   
+    if (dropdownItemId === "pitt"){
+        departureDate.textContent = "Pittsburgh to Philadelphia - "+ depDate;
+    }
+
+
+    else if(dropdownItemId === "ny"){
+        departureDate.textContent = "New York to Philadelphia - "+ depDate;
+    }
+
+    else if(dropdownItemId === "bos"){
+        departureDate.textContent = "Boston to Philadelphia - " + depDate;
+    }
 
 
 });

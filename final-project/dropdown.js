@@ -3,9 +3,6 @@ $(document).ready(function(){
     
     var arrDestText = document.getElementById("arrdropdownTrigger");
 
-   
-    
-    
     var depDestText = document.getElementById("dropdownTrigger");
 
     // Event listener for Bootstrap dropdown show event
@@ -64,8 +61,12 @@ function initDatePicker() {
         startDate: 'today',
         endDate: '+1w',
     }).on('changeDate', function (selected) {
+        localStorage.setItem('departureDate', moment(selected.date).format('dddd, MMMM D'));
         // Update the start date of the second date picker when the first date picker's date changes
         $('#arrdatepickerTrigger').datepicker('setStartDate', selected.date);
+        var endDateForSecondPicker = new Date();
+        endDateForSecondPicker.setDate(endDateForSecondPicker.getDate() + 7);
+        $('#arrdatepickerTrigger').datepicker('setEndDate', endDateForSecondPicker);
     });
 }
 
@@ -77,6 +78,7 @@ function initArrDatePicker() {
         startDate: 'today',
         endDate: '+1w'
     }).on('changeDate', function (selected) {
+        localStorage.setItem('arrivalDate', moment(selected.date).format('dddd, MMMM D'));
         // Calculate the end date for the first date picker based on the selected date
         var endDateForFirstPicker = new Date(selected.date);
         endDateForFirstPicker.setDate(endDateForFirstPicker.getDate()); // Add one day

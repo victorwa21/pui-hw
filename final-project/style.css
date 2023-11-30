@@ -202,5 +202,145 @@ body{
     margin-bottom:50px;
 }
 .fares{
-    height:800px;
+    height:500px;
 }
+
+/*step indicator*/
+.step-indicator {
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+.step {
+    
+    position: relative;
+    width: 80px; /* Adjust the width of the rectangle */
+    height: 40px; /* Adjust the height of the rectangle */
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    margin-left:-3%;
+}
+
+
+.step.active {
+    background-color: #005478;
+    color: #fff;
+}
+
+/*.connector {
+    flex: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 5px;
+}*/
+.piece{
+    clip-path: polygon(0 0, 10% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+    
+
+}
+.end {
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+.steps{
+    
+    background-color: blue;
+    margin-top: 20px;
+}
+.dateInfo{
+   
+    margin-top:50px;
+   
+   
+}
+.departureDate{
+    width:65.5%;
+    border:#005478 2px solid;
+    border-radius: 10px;
+    padding:20px;
+    justify-content: center;
+    margin:auto;
+}
+.fare-options {
+    display: none;
+}
+
+/* Show the fare options when the "fares" class is present */
+#eachTrip.fares .fare-options {
+    display: block;
+}
+#fareLine{
+    margin-top:-100px;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+
+/* Style the custom radio button */
+input[type="radio"] + label {
+    position: relative;
+    margin-left: 100px; /* Adjust the padding based on your design */
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px; /* Adjust line height based on your design */
+    margin-top:30px;
+    width:594px;
+}
+
+/* Style the custom indicator (circle or dot) */
+input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust the width based on your design */
+    height: 20px; /* Adjust the height based on your design */
+    border: 2px solid #005478; /* Border color */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #fff; /* Background color */
+    box-sizing: border-box;
+    margin-left: 580px; /* Adjust the padding based on your design */
+}
+
+/* Style the indicator when the radio button is checked */
+input[type="radio"]:checked + label:before {
+    background-color: #005478; /* Change background color when checked */
+    border-color: #005478; /* Change border color when checked */
+    
+    /* Add any additional styles for the checked state */
+}
+input[type="radio"]:checked + label {
+   font-weight: bold;
+   
+   width:594px;
+}
+.fareTitle{
+    padding-left:80px;
+    font-size:20px;
+    font-weight: bold;
+}
+label{
+    display:flex;
+}
+.confirm{
+    width:100px;
+    height:50px;
+    color:white;
+    font-size:14px;
+    background-color: #005478;
+    border-radius:10px;
+    margin-left:625px;
+    margin-top:50px;
+}
+
