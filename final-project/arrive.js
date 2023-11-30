@@ -3,8 +3,8 @@ $(document).ready(function(){
     var trips = {
     
             pitt: [
-                { id: 1, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
-                  arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$46.00"},
+                { id: 1, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "30th St. Station - 2955 Market St", depCity: "PIT", estTime: "6 hr 59 min",
+                  arrLoc:"1100 Liberty Ave", arrCity: "PHL", price: "$46.00"},
                   { id: 2, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
                   arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$50.00"},
                 //{ id: 3, name: "Object3", value: "Value3" }
@@ -203,21 +203,21 @@ $(document).ready(function(){
 
     
 
-    var depDate = localStorage.getItem('departureDate');
-    departureDate = document.querySelector(".departureDate");
-    departureDate.textContent = depDate;
+    var arrDate = localStorage.getItem('arrivalDate');
+    arrivalDate = document.querySelector(".departureDate");
+    arrivalDate.textContent = arrDate;
    
     if (dropdownItemId === "pitt"){
-        departureDate.textContent = "Pittsburgh to Philadelphia - "+ depDate;
+        arrivalDate.textContent = "Philadelphia to Pittsburgh - "+ arrDate;
     }
 
 
     else if(dropdownItemId === "ny"){
-        departureDate.textContent = "New York to Philadelphia - "+ depDate;
+        arrivalDate.textContent = "Philadelphia to New York - "+ arrDate;
     }
 
     else if(dropdownItemId === "bos"){
-        departureDate.textContent = "Boston to Philadelphia - " + depDate;
+        arrivalDate.textContent = "Philadelphia to Boston - " + arrDate;
     }
 
 

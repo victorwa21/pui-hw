@@ -1,4 +1,5 @@
 var dropdownItemId;
+
 $(document).ready(function(){
     
     var arrDestText = document.getElementById("arrdropdownTrigger");
