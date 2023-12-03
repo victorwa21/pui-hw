@@ -132,7 +132,7 @@ body{
     color:#005478;
 }
 
-#dropdownTrigger, #arrdropdownTrigger{
+#dropdownTrigger, #arrdropdownTrigger, #bicyclesDropdown, #petsDropdown{
     background:white;
     border: #005478 1px solid;
     color:#005478;
@@ -224,7 +224,7 @@ body{
     align-items: center;
     color: #fff;
     font-size: 14px;
-    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
     margin-left:-3%;
 }
 
@@ -251,7 +251,7 @@ body{
 }
 .steps{
     
-    background-color: blue;
+    background-color: #fff;
     margin-top: 20px;
 }
 .dateInfo{
@@ -345,6 +345,60 @@ label{
 }
 .activePiece{
     clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(10.5% 0, 100% 0, 86.5% 100%, 0 100%);
+    clip-path: polygon(13.5% 0, 100% 0, 86.5% 100%, 0 100%);
+}
+.depStep{
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+.container.addOns{
+    border:#005478 solid 2px;
+    border-radius:10px;
+    height:450px;
+    margin-top:50px;
+    max-width:60%;
+}
+.container.aoTop{
+    display:flex;
+    max-width:60%;
+    font-size:20px;
+    font-weight: bolder;
+    margin-top:50px;
+}
+.row.bRow  {
+    
+   
+    
+   
+    text-align:center;
+   
+   
+    
+}
+.row.pRow{
+    margin-top:50px;
+    
+    
+    text-align:center;
 }
 
+
+.addOnElements{
+    margin:auto;
+    justify-content: center;
+    margin-top:100px;
+   
+    width:80%;
+}
+.bicycles, .pets{
+    font-weight:bold;
+}
+.aoconfirm{
+    width:100px;
+    height:50px;
+    color:white;
+    font-size:14px;
+    background-color: #005478;
+    border-radius:10px;
+    margin-left:68%;
+    margin-top:100px;
+}

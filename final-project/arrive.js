@@ -101,9 +101,9 @@ $(document).ready(function(){
 
                 // Convert the extracted string to a number
                 const numericPrice = parseFloat(price);
-                localStorage.setItem('selTripPrice', numericPrice);
-                localStorage.setItem('selectedFare', 0);
-                let initialPrice = parseFloat(localStorage.getItem('selTripPrice'));
+                localStorage.setItem('aselTripPrice', numericPrice);
+                localStorage.setItem('aselectedFare', 0);
+                let initialPrice = parseFloat(localStorage.getItem('aselTripPrice'));
                 totalP = initialPrice.toFixed(2);
 
 
@@ -159,8 +159,8 @@ $(document).ready(function(){
                             
                            
                             const selectedPrice = parseFloat(this.getAttribute('price'));
-                            const selTripPrice = parseFloat(localStorage.getItem('selTripPrice'));
-                            localStorage.setItem('selectedFare', this.value);
+                            const selTripPrice = parseFloat(localStorage.getItem('aselTripPrice'));
+                            localStorage.setItem('aselectedFare', this.value);
 
                             // Assuming .depPrice is a class applied to an element that displays the price
                             totalPint=(selectedPrice + selTripPrice)
@@ -170,9 +170,9 @@ $(document).ready(function(){
                         });
                     });
                     $('.confirm').on('click', function()  {
-                        localStorage.setItem('finalDepPrice', totalP);
+                        localStorage.setItem('finalArrPrice', totalP);
                         console.log(totalP);
-                        window.location.href = "bookarr.html";
+                        window.location.href = "addons.html";
                     }
 
                     )}

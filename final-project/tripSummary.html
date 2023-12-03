@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Mulish:wght@200;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <title>AMTRAK Ticket Booking</title>
+    </head>
+    <body>
+        <div class="head">
+            <img src="images/amtrak head.jpg">
+        </div>
+        <div class="container steps ">
+        <div class="row step-indicator justify-content-center">
+            <div class="step col-2 depStep">Departure</div>
+           
+            <div class="step piece col-2 ">Return</div>
+        
+            <div class="step col-2 piece">Add-ons</div>
+            <div class="step active col-3 activePiece">Trip Summary</div>
+            <div class="step col-2 end">Payment</div>
+            <!-- Add more steps as needed -->
+        </div>
+    </div>
+    <div class="row justify-content-center" id="eachTrip">
+        <div class="depleaveInfo  col-3">
+            <div class = "time1">
+                
+            </div>
+            <div class ="address1">
+                
+            <div class="address1city">
+                
+            </div>
+            </div>
+        </div>
+        <div class="depMiddle  col-2">
+            <div class="totalTime">
+                
+            </div>
+            <div class = "arrow">
+                <img src="images/arrow.png">
+            </div>
+        </div>
+           
+        <div class="deparriveInfo  col-3">
+            <div class = "time2">
+                
+            </div>
+            <div class ="address2">
+                
+                <div class="address2city">
+                    
+                </div>
+            </div>
+        </div>
+        <div class = "proceed col-2">
+
+            <div class="depPrice">
+                
+            </div>
+            <button class="select">
+                SELECT
+            </button>
+        </div>
+
+        <div class="fare-options">
+            <hr id="#fareLine">
+            <div class="fareTitle">Fare Class:</div>
+            <div class="fareOptions">
+            
+        </div>
+            <button class="confirm">CONFIRM</button>
+        
+    </div>
+
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="addons.js"></script>
+       
+        
+    </body>
+</html>
