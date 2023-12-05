@@ -173,11 +173,11 @@ body{
     background-color: #005478;
     border-radius:10px;
 }
-.time1, .time2{
+.time1, .time2, .rettime1, .rettime2{
     font-size:24px;
     font-weight:bold;
 }
-.address1, .address2{
+.address1, .address2, .retaddress1, .retaddress2{
     margin-top:20px;
 }
 #eachTrip{
@@ -196,7 +196,7 @@ body{
 .arrow img{
     width:90px;
 }
-.depPrice{
+.depPrice, .retPrice{
     font-size:28px;
     font-weight:bold;
     margin-bottom:50px;
@@ -401,4 +401,14 @@ label{
     border-radius:10px;
     margin-left:68%;
     margin-top:100px;
+}
+.container.depText, .container.retText{
+    padding-top:50px;
+    font-size:28px;
+    font-weight: bold;
+    
+    width:870px;
+    margin:auto;
+   
+    margin-bottom:30px;
 }

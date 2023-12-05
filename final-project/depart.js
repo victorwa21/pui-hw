@@ -30,7 +30,8 @@ $(document).ready(function(){
                 if (dropdownItemId === key) {
                     var tripOptions = trips[key];
                     for (var i = 0; i < tripOptions.length; i++) {
-                        createTrip(tripOptions[i]);
+                        createTrip(tripOptions[i])
+                        
                 }
             }
         }
@@ -88,8 +89,27 @@ $(document).ready(function(){
                 
                 templateContainer.classList.toggle("fares");
                
+
+
        
                 $('.select').hide();
+                time1 = templateContainer.querySelector(".time1");
+                time2 = templateContainer.querySelector(".time2");
+                address1 = templateContainer.querySelector(".address1");
+                address1city = templateContainer.querySelector(".address1city");
+                totalTime = templateContainer.querySelector(".totalTime");
+                address2 = templateContainer.querySelector(".address2");
+                address2city = templateContainer.querySelector(".address2city");
+                
+                localStorage.setItem('deptime1',time1.textContent);
+                console.log(localStorage.getItem('deptime1'));
+                localStorage.setItem('deptime2', time2.textContent);
+                localStorage.setItem('depadd1', address1.textContent);
+                localStorage.setItem('depadd1city', address1city.textContent);
+                localStorage.setItem('depadd2', address2.textContent);
+                localStorage.setItem('depadd2city', address2city.textContent);
+                localStorage.setItem('deptottime', totalTime.textContent);
+            
                 let p = templateContainer.querySelector(".depPrice");
                 const depPriceText = p.textContent;
 
@@ -103,6 +123,10 @@ $(document).ready(function(){
                 const numericPrice = parseFloat(price);
                 localStorage.setItem('selTripPrice', numericPrice);
                 localStorage.setItem('selectedFare', 0);
+                
+
+
+                
                 let initialPrice = parseFloat(localStorage.getItem('selTripPrice'));
                 totalP = initialPrice.toFixed(2);
 

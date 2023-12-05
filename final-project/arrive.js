@@ -3,10 +3,10 @@ $(document).ready(function(){
     var trips = {
     
             pitt: [
-                { id: 1, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "30th St. Station - 2955 Market St", depCity: "PIT", estTime: "6 hr 59 min",
-                  arrLoc:"1100 Liberty Ave", arrCity: "PHL", price: "$46.00"},
-                  { id: 2, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
-                  arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$50.00"},
+                { id: 1, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "30th St. Station - 2955 Market St", depCity: "PHL", estTime: "6 hr 59 min",
+                  arrLoc:"1100 Liberty Ave", arrCity: "PIT", price: "$46.00"},
+                  { id: 2, startTime: "7:00 AM", arriveTime: "1:59 PM", depLoc: "1100 Liberty Ave", depCity: "PHL", estTime: "6 hr 59 min",
+                  arrLoc:"30th St. Station - 2955 Market St", arrCity: "PIT", price: "$50.00"},
                 //{ id: 3, name: "Object3", value: "Value3" }
             ],
             ny: [
@@ -90,6 +90,24 @@ $(document).ready(function(){
                
        
                 $('.select').hide();
+
+                time1 = templateContainer.querySelector(".time1");
+                time2 = templateContainer.querySelector(".time2");
+                address1 = templateContainer.querySelector(".address1");
+                address1city = templateContainer.querySelector(".address1city");
+                totalTime = templateContainer.querySelector(".totalTime");
+                address2 = templateContainer.querySelector(".address2");
+                address2city = templateContainer.querySelector(".address2city");
+                
+                localStorage.setItem('arrtime1',time1.textContent);
+                console.log(localStorage.getItem('arrtime1'));
+                localStorage.setItem('arrtime2', time2.textContent);
+                localStorage.setItem('arradd1', address1.textContent);
+                localStorage.setItem('arradd1city', address1city.textContent);
+                localStorage.setItem('arradd2', address2.textContent);
+                localStorage.setItem('arradd2city', address2city.textContent);
+                localStorage.setItem('arrtottime', totalTime.textContent);
+
                 let p = templateContainer.querySelector(".depPrice");
                 const depPriceText = p.textContent;
 
