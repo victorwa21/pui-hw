@@ -36,7 +36,7 @@ $(document).ready(function () {
     $(".retaddress2city").text(arradd2city);
     $(".retPrice").text("$"+finalArrPrice);
 
-    
+    document.query
 
     
 

@@ -7,7 +7,56 @@ $(document).ready(function(){
                   arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$46.00"},
                   { id: 2, startTime: "8:00 AM", arriveTime: "2:59 PM", depLoc: "1100 Liberty Ave", depCity: "PIT", estTime: "6 hr 59 min",
                   arrLoc:"30th St. Station - 2955 Market St", arrCity: "PHL", price: "$50.00"},
-                //{ id: 3, name: "Object3", value: "Value3" }
+                
+                  
+                  {
+                    id: 3,
+                    startTime: "12:15 PM",
+                    arriveTime: "6:45 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PIT",
+                    estTime: "6 hr 30 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PHL",
+                    price: "$40.25"
+                  },
+                  
+                    {
+                    id: 4,
+                    startTime: "9:45 AM",
+                    arriveTime: "4:15 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PIT",
+                    estTime: "6 hr 30 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PHL",
+                    price: "$60.75"
+                  },
+                  
+                
+                  {
+                    id: 5,
+                    startTime: "11:00 AM",
+                    arriveTime: "5:30 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PIT",
+                    estTime: "6 hr 30 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PHL",
+                    price: "$48.90"
+                  },
+                  {
+                    id: 6,
+                    startTime: "1:20 PM",
+                    arriveTime: "8:10 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PIT",
+                    estTime: "6 hr 50 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PHL",
+                    price: "$42.80"
+                  }
+               
             ],
             ny: [
                 { id: 4, name: "Object4", value: "Value4" },

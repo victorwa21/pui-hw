@@ -7,6 +7,49 @@ $(document).ready(function(){
                   arrLoc:"1100 Liberty Ave", arrCity: "PIT", price: "$46.00"},
                   { id: 2, startTime: "7:00 AM", arriveTime: "1:59 PM", depLoc: "1100 Liberty Ave", depCity: "PHL", estTime: "6 hr 59 min",
                   arrLoc:"30th St. Station - 2955 Market St", arrCity: "PIT", price: "$50.00"},
+                 {
+                    id: 3,
+                    startTime: "9:30 AM",
+                    arriveTime: "3:29 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PHL",
+                    estTime: "5 hr 59 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PIT",
+                    price: "$55.00"
+                },{
+                    id: 4,
+                    startTime: "11:45 AM",
+                    arriveTime: "5:30 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PHL",
+                    estTime: "5 hr 45 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PIT",
+                    price: "$48.50"
+                },
+                {
+                    id: 5,
+                    startTime: "1:15 PM",
+                    arriveTime: "7:14 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PHL",
+                    estTime: "5 hr 59 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PIT",
+                    price: "$52.75"
+                },{
+                    id: 6,
+                    startTime: "3:00 PM",
+                    arriveTime: "8:59 PM",
+                    depLoc: "1100 Liberty Ave",
+                    depCity: "PHL",
+                    estTime: "5 hr 59 min",
+                    arrLoc: "30th St. Station - 2955 Market St",
+                    arrCity: "PIT",
+                    price: "$49.25"
+                }
+                
                 //{ id: 3, name: "Object3", value: "Value3" }
             ],
             ny: [
