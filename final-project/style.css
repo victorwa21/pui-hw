@@ -185,10 +185,11 @@ body{
     background-color: #005478;
     border-radius:10px;
 }
-.time1, .time2, .rettime1, .rettime2{
+.time1, .time2, .rettime1, .rettime2, .addonItems{
     font-size:24px;
     font-weight:bold;
 }
+
 .address1, .address2, .retaddress1, .retaddress2{
     margin-top:20px;
 }
@@ -204,6 +205,18 @@ body{
     margin-bottom:30px;
     
 }
+#eachaddOn{
+    padding:10px;
+    padding-top:30px;
+    padding-bottom:40px;
+    
+    width:850px;
+    margin:auto;
+    border: 3px solid #005478;
+    border-radius:10px;
+    margin-bottom:30px;
+    display:flex;
+}
 
 .arrow img{
     width:90px;
@@ -212,6 +225,18 @@ body{
     font-size:28px;
     font-weight:bold;
     margin-bottom:50px;
+}
+.addonItems{
+    display:flex;
+    width:700px;
+    margin-left:80px;
+    
+}
+.addonPrice{
+    display:flex;
+    font-size:28px;
+    font-weight:bold;
+    margin-right:100px;
 }
 .fares{
     height:500px;
@@ -423,4 +448,59 @@ label{
     margin:auto;
    
     margin-bottom:30px;
+}
+
+.container.weather {
+    display: flex;
+    justify-content: center;
+   
+    width:800px;
+    margin: auto;
+}
+#weatherDropdownBtn, #weatherdepDropdownBtn{
+    margin-right:auto;
+   
+    
+}
+#weatherDropdown, #weatherdepDropdown{
+    width:650px;
+    border: 1px solid #105ccc;
+}
+#dow, #wicon, #max, #min{
+    padding-top:10px;
+    padding-left:30px;
+}
+#dow{
+font-size:24px;
+}
+#wicon{
+    font-size:20px;
+}
+#min{
+    padding-bottom:20px;
+}
+.dropdown-divider.divide{
+    background-color:#105ccc;
+}
+#finalTotal{
+    width:800px;
+    
+    padding-left:510px;
+    font-size:30px;
+    font-weight: bold;
+    margin-top:70px;
+    
+}
+.confirmB{
+    width:150px;
+    height:50px;
+    color:white;
+    font-size:14px;
+    background-color: #005478;
+    border-radius:10px;
+    margin-left:400px;
+    margin-top:20px;
+}
+.container.confirmWidth{
+    width:500px;
 }

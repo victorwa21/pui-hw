@@ -36,8 +36,25 @@ $(document).ready(function () {
     $(".retaddress2city").text(arradd2city);
     $(".retPrice").text("$"+finalArrPrice);
 
-    document.query
-
     
+    const addon = parseInt(localStorage.getItem('addon'), 10);
+    if (addon == 0) {
+        
+        $('.addonItems').text('No add-ons');
+        $('.addonPrice').text('$0.00');
+    } else if (addon == 40) {
+        $('.addonItems').text('1 Bicycle');
+        $('.addonPrice').text('$40.00');
+    } else if (addon == 78) {
+        $('.addonItems').text('1 Pet');
+        $('.addonPrice').text('$78.00');
+    } else if (addon == 118) {
+        $('.addonItems').text('1 Bicycle, 1 Pet');
+        $('.addonPrice').text('$118.00');
+    }
 
+    const finalDepp = parseInt(localStorage.getItem('finalDepPrice'), 10);
+    const finalArrp = parseInt(localStorage.getItem('finalArrPrice'), 10);
+    const finalTotal = finalDepp + finalArrp+ addon;
+    $('#finalTotal').text('Total: $' + finalTotal.toFixed(2));
 });

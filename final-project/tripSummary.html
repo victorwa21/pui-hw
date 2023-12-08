@@ -67,6 +67,19 @@
             
         </div>
     </div>
+
+    <div class="container weather">
+        <button class="btn btn-primary" type="button" id="weatherdepDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false">
+            Show Weather
+        </button>
+        
+        <div class="dropdown">
+            <div class="dropdown-menu" aria-labelledby="weatherdepDropdownBtn" id="weatherdepDropdown">
+                <!-- Weather API content goes here -->
+            </div>
+        </div>
+    </div>
+
     <div class="container retText">Return</div>
     <div class="row justify-content-center" id="eachTrip">
         <div class="depleaveInfo  col-3">
@@ -108,20 +121,42 @@
             
         </div>
     </div>
-    <div class="container retText">Add-ons</div>
-    <div class="row justify-content-center" id="eachTrip">
+    <div class="container weather">
+        <button class="btn btn-primary" type="button" id="weatherDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false">
+            Show Weather
+        </button>
+        
+        <div class="dropdown">
+            <div class="dropdown-menu" aria-labelledby="weatherDropdownBtn" id="weatherDropdown">
+                <!-- Weather API content goes here -->
+            </div>
+        </div>
+    </div>
+    <div class="container retText" >Add-ons</div>
+    <div class="container" id="eachaddOn">
+        <div class="addonItems">
+        </div>
+        <div class="addonPrice">  
+        </div>
+    </div>
+    <div class="container" id="finalTotal">
+        
+    </div>
+    <div class="container confirmWidth">
+    <button class="confirmB" >
+        CONFIRM BOOKING
+    </button>
+    </div>
 
-    </div>
-    <div class = "api-data-phl">
-
-    </div>
-    </div>
+    
+    
+    
     
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="tripSummary.js"></script>
-        <!--<script src="api.js"></script>-->
+        <script src="api.js"></script>
         
     </body>
 </html>
