@@ -134,9 +134,6 @@ function updatedepDropdownWithApiData(forecasts) {
         // Toggle the dropdown manually using Bootstrap 5 API
         const dropdown = new bootstrap.Dropdown(document.getElementById('weatherDropdownBtn'));
 
-        // Fetch weather data only if the dropdown is now visible
-        if (dropdown._menu.classList.contains('show')) {
-            //fetchWeatherData();
-        }
     });
+    
 });
