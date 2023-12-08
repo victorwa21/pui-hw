@@ -13,7 +13,7 @@ $(document).ready(function () {
         
     
         // First API call
-        const url1 = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${depcityId}`;
+        const url1 = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${depcityId}`;
         const params1 = {
             apikey: apiKey,
             language: 'en-us',
@@ -43,7 +43,7 @@ $(document).ready(function () {
      // Replace with your actual AccuWeather API key
     const cityId = 350540; // Replace with the desired city ID
 
-    const url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityId}`;
+    const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityId}`;
     const params = {
         apikey: apiKey,
         language: 'en-us',
