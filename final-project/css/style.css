@@ -1,557 +1,552 @@
 body{
-    font-family: 'Mulish', sans-serif;
-    margin-top:0;
-    margin-left:0;
-    margin-right:0;
+  font-family: 'Mulish', sans-serif;
+  margin-top:0;
+  margin-left:0;
+  margin-right:0;
 }
 .head img{
-    margin-top:0;
-    width:100%;
+  margin-top:0;
+  width:100%;
 }
 
 .book{
-    width:700px;
-    height:500px;
-    border: 3px #005478 solid;
-    border-radius: 20px;
-    margin:auto;
-    margin-top:100px;
+  width:700px;
+  height:500px;
+  border: 3px #005478 solid;
+  border-radius: 20px;
+  margin:auto;
+  margin-top:100px;
 }
 .bookimg {
-    display: flex; /* Use flex container for centering */
-    justify-content: center; /* Center along the main axis (horizontal) */
-    align-items: center; /* Center along the cross axis (vertical) */
-    margin-bottom:-50px;
-    margin-top:30px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom:-50px;
+  margin-top:30px;
 }
-.bookimg img{
-    width:200px;
-   
-    
-}
-.booktitle{
-    font-size:28px;
-    font-weight:700;
-    margin-top: 40px;
-    margin-left: 100px;
-}
-.bookdesc{
-    margin-top:70px;
-    margin-left:120px;
-    width:450px;
-}
-.booktickets{
-    display:block;
-    width:150px;
-    height:50px;
-    margin:auto;
-    margin-top:50px;
-    border: 2px #005478 solid;
-    border-radius: 10px;
-    text-align: center;
-    
-   
-}
-.ticketbutton a{
-    text-decoration:none;
-}
-.booktickets:hover{
-    cursor:pointer;
-    background-color:#005478;
-    color:white;
-    
-}
-.searchDiv{
-    width:900px;
-    height:500px;
-    border: 3px #005478 solid;
-    border-radius: 20px;
-    margin:auto;
-    margin-top:100px;
-    display:grid;
+.bookimg img {
+  width: 200px;
 }
 
-
-.box{
-    width:200px;
-    height:50px;
-    
-    
-   
+.booktitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-left: 100px;
 }
-.boxes{
-    width:500px;
-    margin:auto;
-    justify-content:center;
+
+.bookdesc {
+  margin-top: 70px;
+  margin-left: 120px;
+  width: 450px;
+}
+
+.booktickets {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px #005478 solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ticketbutton a {
+  text-decoration: none;
+}
+
+.booktickets:hover {
+  cursor: pointer;
+  background-color: #005478;
+  color: white;
+}
+
+.searchDiv {
+  width: 900px;
+  height: 500px;
+  border: 3px #005478 solid;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 100px;
+  display: grid;
+}
+
+.box {
+  width: 200px;
+  height: 50px;
+}
+
+.boxes {
+  width: 500px;
+  margin: auto;
+  justify-content: center;
 }
 
 .narrower-row {
-    width: 300px;
-    display: flex;
-    justify-content: space-between; 
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
+
 .depDest,
 .depDate,
 .arrDest,
 .arrDate {
-    margin-left: 60px;
-    margin-right: 60px; 
-    
-    
-    
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .switch {
-    display: block;
-    justify-content: center;
-    margin:auto;
-    width:50px; /* Adjust the image size */
-
+  display: block;
+  justify-content: center;
+  margin: auto;
+  width: 50px;
 }
 
 #myDropdown, #arrDestdropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    width:300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-top:15px;
-    margin-left:-15px;
-    border:1px black solid;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 15px;
+  margin-left: -15px;
+  border: 1px black solid;
 }
 
 #myDropdown a, #arrDestdropdown a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 12px 16px;
 }
 
 #myDropdown a:hover, #arrDestdropdown a:hover {
-    background-color: #f1f1f1;
-}
-.datepicker, .arrdatepicker{
-    display: block;
-    position:relative;
-    justify-content: center;
-    text-align:center;
-    margin: auto;
-    border:1px black solid;
-    z-index:2;
-    background-color:white;
-    color:#005478;
-}
-.dropdown-item, .arrdropdown-item{
-    font-size:14px;
-}
-.dropdown-menu{
-    color:#005478;
+  background-color: #f1f1f1;
 }
 
-#dropdownTrigger, #arrdropdownTrigger, #bicyclesDropdown, #petsDropdown{
-    background:white;
-    border: #005478 1px solid;
-    color:#005478;
-    margin:auto;
-    justify-content: center;
-    align-items:center;
+.datepicker, .arrdatepicker {
+  display: block;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  border: 1px black solid;
+  z-index: 2;
+  background-color: white;
+  color: #005478;
 }
+
+.dropdown-item, .arrdropdown-item {
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  color: #005478;
+}
+
+#dropdownTrigger, #arrdropdownTrigger, #bicyclesDropdown, #petsDropdown {
+  background: white;
+  border: #005478 1px solid;
+  color: #005478;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 #arrdropdownTrigger {
-    background:white;
-    border: #005478 1px solid;
-    color:#005478;
-    margin:auto;
-    justify-content: center;
-    align-items:center;
-}
-.arrdropdown-item{
-    display: block;
-    width: 100%;
-    padding: 0.25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-    text-decoration:none;
+  background: white;
+  border: #005478 1px solid;
+  color: #005478;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-  
-  .arrdropdown-item:hover, .arrdropdown-item:focus {
-    color: #16181b;
-    text-decoration: none;
-    background-color: #f8f9fa;
-  }
+.arrdropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+.arrdropdown-item:hover, .arrdropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
 
 .dropdown-item.active, .arrdropdown-item.active {
-    background-color: #ffcc00; /* Your desired background color */
-    color: #333; /* Your desired text color */
-}
-.search{
-    width:160px;
-    height:50px;
-    color:white;
-    font-size:18px;
-    background-color: #005478;
-    border-radius:10px;
-
-}
-#datepickerBtn, #arrdatepickerBtn{
-    width:250px;
-}
-.depTrips{
-    
-    
-   
-    
-    margin:auto;
-    margin-top:50px;
-    
-}
-.select{
-    width:100px;
-    height:50px;
-    color:white;
-    font-size:14px;
-    background-color: #005478;
-    border-radius:10px;
-}
-.time1, .time2, .rettime1, .rettime2, .addonItems{
-    font-size:24px;
-    font-weight:bold;
+  background-color: #ffcc00;
+  color: #333;
 }
 
-.address1, .address2, .retaddress1, .retaddress2{
-    margin-top:20px;
-}
-#eachTrip{
-    padding:10px;
-    padding-top:30px;
-    padding-bottom:40px;
-    
-    width:850px;
-    margin:auto;
-    border: 3px solid #005478;
-    border-radius:10px;
-    margin-bottom:30px;
-    
-}
-#eachaddOn{
-    padding:10px;
-    padding-top:30px;
-    padding-bottom:40px;
-    
-    width:850px;
-    margin:auto;
-    border: 3px solid #005478;
-    border-radius:10px;
-    margin-bottom:30px;
-    display:flex;
+.search {
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  background-color: #005478;
+  border-radius: 10px;
 }
 
-.arrow img{
-    width:90px;
-}
-.depPrice, .retPrice{
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:50px;
-}
-.addonItems{
-    display:flex;
-    width:700px;
-    margin-left:80px;
-    
-}
-.addonPrice{
-    display:flex;
-    font-size:28px;
-    font-weight:bold;
-    margin-right:100px;
-}
-.fares{
-    height:500px;
+#datepickerBtn, #arrdatepickerBtn {
+  width: 250px;
 }
 
-/*step indicator*/
+.depTrips {
+  margin: auto;
+  margin-top: 50px;
+}
+
+.select {
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  background-color: #005478;
+  border-radius: 10px;
+}
+
+.time1, .time2, .rettime1, .rettime2, .addonItems {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.address1, .address2, .retaddress1, .retaddress2 {
+  margin-top: 20px;
+}
+
+#eachTrip {
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 850px;
+  margin: auto;
+  border: 3px solid #005478;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#eachaddOn {
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  width: 850px;
+  margin: auto;
+  border: 3px solid #005478;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.arrow img {
+  width: 90px;
+}
+
+.depPrice, .retPrice {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.addonItems {
+  display: flex;
+  width: 700px;
+  margin-left: 80px;
+}
+
+.addonPrice {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 100px;
+}
+
+.fares {
+  height: 500px;
+}
+
 .step-indicator {
-    display: flex;
-    align-items: center;
-    
-   
+  display: flex;
+  align-items: center;
 }
 
 .step {
-    
-    position: relative;
-    width: 80px; /* Adjust the width of the rectangle */
-    height: 40px; /* Adjust the height of the rectangle */
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 14px;
-    clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
-    margin-left:-3%;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
+  margin-left: -3%;
 }
-
 
 .step.active {
-    background-color: #005478;
-    color: #fff;
+  background-color: #005478;
+  color: #fff;
 }
 
-/*.connector {
-    flex: 1;
-    height: 2px;
-    background-color: #ccc;
-    margin: 0 5px;
-}*/
-.piece{
-    clip-path: polygon(0 0, 10% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
-    
-
+.piece {
+  clip-path: polygon(0 0, 10% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
 }
+
 .end {
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
 }
-.steps{
-    
-    background-color: #fff;
-    margin-top: 20px;
+
+.steps {
+  background-color: #fff;
+  margin-top: 20px;
 }
-.dateInfo{
-   
-    margin-top:50px;
-   
-   
+
+.dateInfo {
+  margin-top: 50px;
 }
-.departureDate{
-    width:65.5%;
-    border:#005478 2px solid;
-    border-radius: 10px;
-    padding:20px;
-    justify-content: center;
-    margin:auto;
+
+.departureDate {
+  width: 65.5%;
+  border: #005478 2px solid;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: center;
+  margin: auto;
 }
+
 .fare-options {
-    display: none;
+  display: none;
 }
 
-/* Show the fare options when the "fares" class is present */
 #eachTrip.fares .fare-options {
-    display: block;
-}
-#fareLine{
-    margin-top:-100px;
+  display: block;
 }
 
+#fareLine {
+  margin-top: -100px;
+}
 
 input[type="radio"] {
-    display: none;
+  display: none;
 }
 
-
-/* Style the custom radio button */
 input[type="radio"] + label {
-    position: relative;
-    margin-left: 100px; /* Adjust the padding based on your design */
-    cursor: pointer;
-    display: inline-block;
-    line-height: 20px; /* Adjust line height based on your design */
-    margin-top:30px;
-    width:594px;
+  position: relative;
+  margin-left: 100px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  margin-top: 30px;
+  width: 594px;
 }
 
-/* Style the custom indicator (circle or dot) */
 input[type="radio"] + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; /* Adjust the width based on your design */
-    height: 20px; /* Adjust the height based on your design */
-    border: 2px solid #005478; /* Border color */
-    border-radius: 50%; /* Make it a circle */
-    background-color: #fff; /* Background color */
-    box-sizing: border-box;
-    margin-left: 580px; /* Adjust the padding based on your design */
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #005478;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-left: 580px;
 }
 
-/* Style the indicator when the radio button is checked */
 input[type="radio"]:checked + label:before {
-    background-color: #005478; /* Change background color when checked */
-    border-color: #005478; /* Change border color when checked */
-    
-    /* Add any additional styles for the checked state */
+  background-color: #005478;
+  border-color: #005478;
 }
+
 input[type="radio"]:checked + label {
-   font-weight: bold;
-   
-   width:594px;
-}
-.fareTitle{
-    padding-left:80px;
-    font-size:20px;
-    font-weight: bold;
-}
-label{
-    display:flex;
-}
-.confirm{
-    width:100px;
-    height:50px;
-    color:white;
-    font-size:14px;
-    background-color: #005478;
-    border-radius:10px;
-    margin-left:625px;
-    margin-top:50px;
-}
-.activePiece{
-    clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(13.5% 0, 100% 0, 86.5% 100%, 0 100%);
-}
-.depStep{
-    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-}
-.container.addOns{
-    border:#005478 solid 2px;
-    border-radius:10px;
-    height:450px;
-    margin-top:50px;
-    max-width:60%;
-}
-.container.aoTop{
-    display:flex;
-    max-width:60%;
-    font-size:20px;
-    font-weight: bolder;
-    margin-top:50px;
-}
-.row.bRow  {
-    
-   
-    
-   
-    text-align:center;
-   
-   
-    
-}
-.row.pRow{
-    margin-top:50px;
-    
-    
-    text-align:center;
+  font-weight: bold;
+  width: 594px;
 }
 
+.fareTitle {
+  padding-left: 80px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-.addOnElements{
-    margin:auto;
-    justify-content: center;
-    margin-top:100px;
-   
-    width:80%;
+label {
+  display: flex;
 }
-.bicycles, .pets{
-    font-weight:bold;
+
+.confirm {
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  background-color: #005478;
+  border-radius: 10px;
+  margin-left: 625px;
+  margin-top: 50px;
 }
-.aoconfirm{
-    width:100px;
-    height:50px;
-    color:white;
-    font-size:14px;
-    background-color: #005478;
-    border-radius:10px;
-    margin-left:68%;
-    margin-top:100px;
+
+.activePiece {
+  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(13.5% 0, 100% 0, 86.5% 100%, 0 100%);
 }
-.container.depText, .container.retText{
-    padding-top:50px;
-    font-size:28px;
-    font-weight: bold;
-    
-    width:870px;
-    margin:auto;
-   
-    margin-bottom:30px;
+
+.depStep {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.container.addOns {
+  border: #005478 solid 2px;
+  border-radius: 10px;
+  height: 450px;
+  margin-top: 50px;
+  max-width: 60%;
+}
+
+.container.aoTop {
+  display: flex;
+  max-width: 60%;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+.row.bRow {
+  text-align: center;
+}
+
+.row.pRow {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.addOnElements {
+  margin: auto;
+  justify-content: center;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.bicycles,
+.pets {
+  font-weight: bold;
+}
+
+.aoconfirm {
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  background-color: #005478;
+  border-radius: 10px;
+  margin-left: 68%;
+  margin-top: 100px;
+}
+
+.container.depText,
+.container.retText {
+  padding-top: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  width: 870px;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .container.weather {
-    display: flex;
-    justify-content: center;
-   
-    width:800px;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  margin: auto;
 }
-#weatherDropdownBtn, #weatherdepDropdownBtn{
-    margin-right:auto;
-   
-    
+
+#weatherDropdownBtn,
+#weatherdepDropdownBtn {
+  margin-right: auto;
 }
-#weatherDropdown, #weatherdepDropdown{
-    width:650px;
-    border: 1px solid #105ccc;
+
+#weatherDropdown,
+#weatherdepDropdown {
+  width: 650px;
+  border: 1px solid #105ccc;
 }
-#dow, #wicon, #max, #min{
-    padding-top:10px;
-    padding-left:30px;
+
+#dow,
+#wicon,
+#max,
+#min {
+  padding-top: 10px;
+  padding-left: 30px;
 }
-#dow{
-font-size:24px;
+
+#dow {
+  font-size: 24px;
 }
-#wicon{
-    font-size:20px;
+
+#wicon {
+  font-size: 20px;
 }
-#min{
-    padding-bottom:20px;
+
+#min {
+  padding-bottom: 20px;
 }
-.dropdown-divider.divide{
-    background-color:#105ccc;
+
+.dropdown-divider.divide {
+  background-color: #105ccc;
 }
-#finalTotal{
-    width:740px;
-    
-    padding-left:480px;
-    font-size:30px;
-    font-weight: bold;
-    margin-top:70px;
-    
+
+#finalTotal {
+  width: 740px;
+  padding-left: 480px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 70px;
 }
-.confirmB{
-    width:200px;
-    height:50px;
-    color:white;
-    font-size:14px;
-    background-color: #005478;
-    border-radius:10px;
-    margin-left:350px;
-    margin-top:20px;
+
+.confirmB {
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  background-color: #005478;
+  border-radius: 10px;
+  margin-left: 350px;
+  margin-top: 20px;
 }
-.container.confirmWidth{
-    width:500px;
+
+.container.confirmWidth {
+  width: 500px;
 }
-.container.purchase{
-    width:400px;
-    height:500px;
-    border:3px solid #005478;
-    border-radius:10px;
-    justify-content: center;
-    margin-top:80px;
-    text-align:center;
-    padding-top:50px;
-    font-size:24px;
-    font-weight:bold;
+
+.container.purchase {
+  width: 400px;
+  height: 500px;
+  border: 3px solid #005478;
+  border-radius: 10px;
+  justify-content: center;
+  margin-top: 80px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
 }
-.container.purchase img{
-    width:200px;
-    margin-top:50px;
+
+.container.purchase img {
+  width: 200px;
+  margin-top: 50px;
 }
+
