@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     
     localStorage.setItem('addonBicycles', 0);
@@ -8,19 +7,14 @@ $(document).ready(function () {
         
         var selectedValue = $(this).data("value");
 
-        
         var dropdownButton = $(this).closest(".dropdown").find(".dropdown-toggle");
         dropdownButton.text(selectedValue);
 
-        
         if (dropdownButton.attr("id") === 'bicyclesDropdown') {
             localStorage.setItem('addonBicycles', selectedValue * 40);
         } else if (dropdownButton.attr("id") === 'petsDropdown') {
             localStorage.setItem('addonPets', selectedValue * 78);
         }
-
-        
-       
         
     });
 
@@ -32,3 +26,4 @@ $(document).ready(function () {
         window.location.href = "tripSummary.html";
     });
 });
+
