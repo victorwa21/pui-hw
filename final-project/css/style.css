@@ -290,7 +290,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: black;
   font-size: 14px;
   clip-path: polygon(0 0, 100% 0, 86.5% 100%, 0% 100%);
   margin-left: -3%;
